@@ -1,5 +1,6 @@
 package co.escuelaing.edu.arsw.WeatherInfo.service.impl;
 
+import co.escuelaing.edu.arsw.WeatherInfo.cache.WeatherCache;
 import co.escuelaing.edu.arsw.WeatherInfo.connector.ConnectorApi;
 import co.escuelaing.edu.arsw.WeatherInfo.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,20 @@ public class WeatherServiceImpl implements WeatherService {
     @Qualifier("conn")
     ConnectorApi connectorApi;
 
+    @Autowired
+    @Qualifier("cache")
+    WeatherCache cache;
+
     @Override
     public String getDataByCity(String city) {
-        return connectorApi.getData(city);
+        String data="";
+        if(cache.contendData(city)){
+            data=cache.getByName(city);
+        }
+        else{
+            data = connectorApi.getData(city);
+            cache.AddData(city,data);
+        }
+        return data;
     }
 }
