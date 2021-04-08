@@ -1,5 +1,6 @@
 # Escuela Colombiana de Ingeniería Julio Garavito - Arquitecturas de Software ARSW - Parcial Segundo Tercio
 
+
 ## Preparación para el Parcial
 
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
@@ -130,4 +131,5 @@ AL ingresar podrán introducir el nombre de la ciudad que desean consultar, el p
 les mostrara un información básica y les indicara en el mapa donde se localiza la ciudad
 
 
-Corregido con https://www.corrector.co/es/
+link Heroku:
+* https://ramos-arsw-t2.herokuapp.com/
