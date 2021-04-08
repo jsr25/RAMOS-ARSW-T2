@@ -17,7 +17,9 @@ const app = (function () {
             let json = JSON.parse(data)
             let main =json.main
             let info =json.weather[0]
+            console.log(json.coord)
             showInfo(main,info)
+            map.addmarket(json.coord)
         }, erro =>{
             alert("no se Encontraron los datos solicitados")
         }
@@ -30,8 +32,11 @@ const app = (function () {
         $("#table").append(table)
     }
 
+    
+
     return {
         getWeatherByName : getWeatherByName 
+        
     }
 
 
