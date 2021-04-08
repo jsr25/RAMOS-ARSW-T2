@@ -108,4 +108,26 @@ document.getElementById("demo").innerHTML = "name: " + obj.name + ", age: " + ob
 ```
 
 * Código de página con Mapa embebido [(Ver archivo)](index.html)
-    
+
+## Ejecución
+
+Para la ejecución del programa en su máquina debe contar con las siguientes herramientas:
+* Java
+* Maven
+* Itellij IDEA
+* Git
+
+Lo primero que debe hacer es clonar el repositorio con el comando:
+* git clone https://github.com/jsr25/RAMOS-ARSW-T2.git
+
+Luego entrar en la carpeta raíz del proyecto y ejecutar el comando:
+* mvn spring-boot:run
+
+Al terminar de ejecutar podrán entrar al navegador por este link
+* http://localhost:8080/
+
+AL ingresar podrán introducir el nombre de la ciudad que desean consultar, el programa
+les mostrara un información básica y les indicara en el mapa donde se localiza la ciudad
+
+
+Corregido con https://www.corrector.co/es/
