@@ -10,6 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 @Component
+@Qualifier("conn")
 public class ConnectroApiImpl implements ConnectorApi {
     private final String apiKey ="42aafc92cbb3c37a49168ea7f392d26e";
 
